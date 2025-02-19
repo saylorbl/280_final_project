@@ -31,21 +31,46 @@
       <p class="text-center text-white font-bold text-xl">Welcome to the Rose parking app!</p>
       <p class="text-center text-white">Click on the parking lot you are in, then click the spot you are taking up</p>
       <br><br>
-      <img class="rounded-lg shadow-lg" src="../Campus_overview.png" alt="Campus Map" usemap="#campusMap">
+      <img class="rounded-lg shadow-lg w-full" src="../Campus_overview.png" alt="Campus Map" usemap="#campusMap">
       <map name="campusMap">
-        <area id="triplets" shape="rect" coords="175, 70, 245, 120" href="../testPage.html" alt="Test link">
-        <area id="LakesideNorth" shape="rect" coords="80, 170, 140, 240" href="../testPage.html" alt="Test link">
-        <!-- <area id="triplets" shape="rect" coords="175, 70, 245, 120" href="../testPage.html" alt="Test link">
-        <area id="triplets" shape="rect" coords="175, 70, 245, 120" href="../testPage.html" alt="Test link">
-        <area id="triplets" shape="rect" coords="175, 70, 245, 120" href="../testPage.html" alt="Test link"> -->
+        <area id="triplets" shape="rect" coords="255, 115, 345, 180" href="../testPage.html" alt="Test link">
+        <area id="lakesideNorth" shape="rect" coords="120, 265, 200, 360" href="../testPage.html" alt="Test link">
+        <area id="lakesideSouth" shape="circle" coords="170, 435, 45" href="../testPage.html" alt="Test link">
+        <area id="percopo" shape="circle" coords="320, 485, 45" href="../testPage.html" alt="Test link">
+        <area id="speed" shape="rect" coords="490, 455, 575, 555" href="../testPage.html" alt="Test link">
+        <area id="hatfield" shape="rect" coords="930, 370, 965, 435" href="../testPage.html" alt="Test link">
+        <area id="bic" shape="rect" coords="760, 120, 825, 175" href="../testPage.html" alt="Test link">
+        <area id="commuter" shape="rect" coords="1265, 90, 1365, 150" href="../testPage.html" alt="Test link">
       </map>
     </div>
 
-    <div id="tripletsLabel" class="bg-black inline-block absolute invisible" style="top: 200px; left: 100px">
+    <!-- tags that are hidden unless the lot is hovered over -->
+    <div id="tripletsLabel" class="bg-black inline-block absolute invisible" style="top: 250px; left: 200px">
       <p class="text-white">Triplets Lot</p>
     </div>
-    <div id="LakesideNorthLabel" class="bg-black inline-block absolute invisible" style="top: 300px; left: 50px">
+    <div id="lakesideNorthLabel" class="bg-black inline-block absolute invisible" style="top: 375px; left: 50px">
       <p class="text-white">Lakeside North Lot</p>
+    </div>
+    <div id="lakesideSouthLabel" class="bg-black inline-block absolute invisible" style="top: 515px; left: 25px">
+      <p class="text-white">Lakeside South Lot</p>
+    </div>
+    <div id="percopoLabel" class="bg-black inline-block absolute invisible" style="top: 650px; left:200px">
+      <p class="text-white">Percopo Lot</p>
+    </div>
+    <div id="speedLabel" class="bg-black inline-block absolute invisible" style="top: 650px; left: 650px">
+      <p class="text-white">Speed Lot</p>
+    </div>
+    <div id="srcLabel" class="bg-black inline-block absolute invisible" style="top: 375px; left: 50px">
+      <p class="text-white">SCR Lot</p>
+    </div>
+    <div id="hatfieldLabel" class="bg-black inline-block absolute invisible" style="top: 600px; left: 950px">
+      <p class="text-white">Hatfield Lot</p>
+    </div>
+    <div id="bicLabel" class="bg-black inline-block absolute invisible" style="top: 265px; left: 820px">
+      <p class="text-white">BIC/KIC Lot</p>
+    </div>
+    <div id="commuterLabel" class="bg-black inline-block absolute invisible" style="top: 50px; left: 50px">
+      <p class="text-white">Commuter Lot :(</p>
     </div>
 
     <script>
