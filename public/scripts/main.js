@@ -20,6 +20,13 @@ rhit.buttonSetup = function () {
 	document.querySelector("#triplets").addEventListener("mouseout", () => {
 		document.querySelector("#tripletsLabel").classList.add("invisible");
 	});
+
+	document.querySelector("#LakesideNorth").addEventListener("mouseover", () => {
+		document.querySelector("#LakesideNorthLabel").classList.remove("invisible");
+	});
+	document.querySelector("#LakesideNorth").addEventListener("mouseout", () => {
+		document.querySelector("#LakesideNorthLabel").classList.add("invisible");
+	});
 };
 
 rhit.ClassName = class {
