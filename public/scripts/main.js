@@ -69,6 +69,13 @@ rhit.buttonSetup = function () {
 	document.querySelector("#commuter").addEventListener("mouseout", () => {
 		document.querySelector("#commuterLabel").classList.add("invisible");
 	});
+
+	document.querySelector("#src").addEventListener("mouseover", () => {
+		document.querySelector("#srcLabel").classList.remove("invisible");
+	});
+	document.querySelector("#src").addEventListener("mouseout", () => {
+		document.querySelector("#srcLabel").classList.add("invisible");
+	});
 };
 
 rhit.ClassName = class {
@@ -86,6 +93,7 @@ rhit.ClassName = class {
 rhit.main = function () {
 	console.log("Ready");
 	rhit.buttonSetup();
+	rhit.transitionSetup();
 };
 
 rhit.main();
