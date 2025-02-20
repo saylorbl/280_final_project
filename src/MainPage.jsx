@@ -13,7 +13,7 @@ export default function MainPage() {
           <br /><br />
           <img className="rounded-lg shadow-lg w-full" src={campusOverview} alt="Campus Map" useMap="#campusMap" />
           <map name="campusMap">
-            <ParkingArea id="triplets" shape="rect" coords="255, 115, 345, 180" href="../testPage.html" label="Triplets Lot" labelStyle={{ top: '250px', left: '200px' }} />
+            <ParkingArea id="triplets" shape="rect" coords="255, 115, 345, 180" href="/triplets" label="Triplets Lot" labelStyle={{ top: '250px', left: '200px' }} />
             <ParkingArea id="lakesideNorth" shape="rect" coords="120, 265, 200, 360" href="../testPage.html" label="Lakeside North Lot" labelStyle={{ top: '375px', left: '50px' }} />
             <ParkingArea id="lakesideSouth" shape="circle" coords="170, 435, 45" href="../testPage.html" label="Lakeside South Lot" labelStyle={{ top: '515px', left: '25px' }} />
             <ParkingArea id="percopo" shape="circle" coords="320, 485, 45" href="../testPage.html" label="Percopo Lot" labelStyle={{ top: '650px', left: '200px' }} />
