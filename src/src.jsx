@@ -1,13 +1,20 @@
+import GenerateGrid from "./GenerateGrid.jsx";
 export default function Src() {
     return (
         <>
-            <div className="bg-red-900 h-screen">
+            <div className="bg-white-900 h-screen">
                 <div>
                     <br /><br />
-                    <p className="text-center text-white font-bold text-xl">SRC Lot</p>
-                    <p className="text-center text-white">Click on a spot to add or remove you</p>
+                    <p className="text-center text-black font-bold text-xl">SRC Lot</p>
+                    <p className="text-center text-black">Click on a spot to add or remove your car</p>
                     <br /><br />
-                    {/* <img className="rounded-lg shadow-lg w-full" src={campusOverview} alt="Campus Map" useMap="#campusMap" /> */}
+                    <div className="mb-16">
+                        <GenerateGrid rows={1} cols={14}/>
+                    </div>
+                    <div className="mb-16">
+                        <GenerateGrid rows={2} cols={14}/>
+                    </div>
+                    <GenerateGrid rows={1} cols={14}/>
                 </div>
             </div>
         </>

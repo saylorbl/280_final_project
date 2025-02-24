@@ -1,3 +1,4 @@
+import GenerateGrid from "./GenerateGrid.jsx";
 export default function Bic() {
     return (
         <>
@@ -7,7 +8,13 @@ export default function Bic() {
                     <p className="text-center text-white font-bold text-xl">BIC/KIC Lot</p>
                     <p className="text-center text-white">Click on a spot to add or remove you</p>
                     <br /><br />
-                    {/* <img className="rounded-lg shadow-lg w-full" src={campusOverview} alt="Campus Map" useMap="#campusMap" /> */}
+                    <div className="mb-16">
+                        <GenerateGrid rows={1} cols={14}/>
+                    </div>
+                    <div className="mb-16">
+                        <GenerateGrid rows={2} cols={14}/>
+                    </div>
+                    <GenerateGrid rows={1} cols={14}/>
                 </div>
             </div>
         </>

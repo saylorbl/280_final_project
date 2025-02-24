@@ -11,6 +11,10 @@ import Commuter from "./commuter.jsx";
 import Hatfield from "./hatfield.jsx";
 import Speed from "./speed.jsx";
 import Src from "./src.jsx";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
   return (
