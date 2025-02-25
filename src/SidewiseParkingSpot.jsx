@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { db } from "./firebaseConfig.js";
 
-function ParkingSpot({ number }) {
+function SidewiseParkingSpot({ number, parkingLot }) {
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      const docRef = doc(db, "parkingSpots", `spot-${number}`);
+      const docRef = doc(db, `${parkingLot}`, `spot-${number}`);
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
@@ -19,7 +19,7 @@ function ParkingSpot({ number }) {
     };
 
     fetchData();
-  }, [number]);
+  }, [number, parkingLot]);
 
   const handleClick = async () => {
     setIsClicked(!isClicked);
@@ -29,7 +29,7 @@ function ParkingSpot({ number }) {
   const save = async (occupied) => {
     console.log("Write to the firestore database");
     try {
-      await setDoc(doc(db, "parkingSpots", `spot-${number}`), {
+      await setDoc(doc(db, `${parkingLot}`, `spot-${number}`), {
         number,
         occupied,
       });
@@ -41,7 +41,7 @@ function ParkingSpot({ number }) {
 
   return (
     <div
-      className={`border-2 border-white h-28 cursor-pointer ${
+      className={`border-2 border-white h-20 w-28 cursor-pointer ${
         isClicked ? "bg-red-500 text-white" : "bg-green-500 text-white"
       }`}
       onClick={handleClick}
@@ -51,8 +51,9 @@ function ParkingSpot({ number }) {
   );
 }
 
-ParkingSpot.propTypes = {
+SidewiseParkingSpot.propTypes = {
   number: PropTypes.number.isRequired,
+  parkingLot: PropTypes.string.isRequired
 };
 
-export default ParkingSpot;
+export default SidewiseParkingSpot;
