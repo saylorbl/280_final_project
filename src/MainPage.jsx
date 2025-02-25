@@ -23,6 +23,8 @@ export default function MainPage() {
             <ParkingArea id="commuter" shape="rect" coords="1265, 90, 1365, 150" href="/commuter" label="Commuter Lot :(" labelStyle={{ top: '300px', left: '1300px' }} />
             <ParkingArea id="src" shape="rect" coords="550, 120, 730, 175" href="/src" label="SRC Lot" labelStyle={{ top: '255px', left: '600px' }} />
           </map>
+          <br /><br />
+          <p className="text-center text-white font-light">This is a proof of concept, parking spots will not accurately reflect Rose Parking</p>
         </div>
       </div>
     </>
