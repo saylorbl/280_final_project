@@ -42,7 +42,7 @@ function ParkingSpot({ number }) {
   return (
     <div
       className={`border-2 border-white h-56 cursor-pointer ${
-        isClicked ? "bg-green-500 text-white" : "bg-red-500 text-white"
+        isClicked ? "bg-red-500 text-white" : "bg-green-500 text-white"
       }`}
       onClick={handleClick}
     >
