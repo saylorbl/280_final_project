@@ -12,7 +12,7 @@ function SidewiseParkingSpot({ number, parkingLot }) {
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
-        setIsClicked(docSnap.data().occupied);
+        setIsClicked(true);
       } else {
         console.log("No such document!");
       }
