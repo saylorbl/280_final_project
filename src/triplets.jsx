@@ -1,9 +1,41 @@
 // import React from "react";
 import ParkingSpot from "./NormalParkingSpot.jsx";
+import Navbar from './navbar';
+import { useNavigate } from "react-router-dom";
 
 export default function Triplets() {
+    const navigate = useNavigate();
     return (
         <>
+            <Navbar
+                    onBic={() => {
+                      navigate("/bic");
+                    }}
+                    onCommuter={() => {
+                      navigate("/commuter");
+                    }}
+                    onHatfield={() => {
+                      navigate("/hatfield");
+                    }}
+                    onSpeed={() => {
+                      navigate("/speed");
+                    }}
+                    onPerc={() => {
+                      navigate("/percopo");
+                    }}
+                    onLakeNorth={() => {
+                      navigate("/lakesideNorth");
+                    }}
+                    onLakeSouth={() => {
+                      navigate("/lakesideSouth");
+                    }}
+                    onTriplets={() => {
+                      navigate("/triplets");
+                    }}
+                    onSrc={() => {
+                      navigate("/src");
+                    }}
+                  />
             <div className="bg-red-900 h-screen">
                 <div>
                     <br /><br />
