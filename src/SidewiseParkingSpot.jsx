@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { doc, setDoc, getDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
 import { db } from "./firebaseConfig.js";
 
 function SidewiseParkingSpot({ number, parkingLot }) {
@@ -22,20 +22,33 @@ function SidewiseParkingSpot({ number, parkingLot }) {
   }, [number, parkingLot]);
 
   const handleClick = async () => {
+    if(isClicked){
+      await deleteItem();
+    }else{
+      await saveItem();
+    }
     setIsClicked(!isClicked);
-    await save(!isClicked);
   };
 
-  const save = async (occupied) => {
-    console.log("Write to the firestore database");
+  const saveItem = async () => {
+    console.log("Saving item");
     try {
       await setDoc(doc(db, `${parkingLot}`, `spot-${number}`), {
-        number,
-        occupied,
+        number
       });
-      console.log(`Document written with ID: spot-${number}`);
+      console.log("Document saved");
     } catch (e) {
-      console.error("Error adding document: ", e);
+      console.log("Error adding doc: ", e);
+    }
+  };
+
+  const deleteItem = async () => {
+    console.log("Deleting item");
+    try {
+      await deleteDoc(doc(db, `${parkingLot}`, `spot-${number}`));
+      console.log("Document deleted");
+    } catch (e) {
+      console.log("Error adding doc: ", e);
     }
   };
 
