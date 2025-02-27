@@ -1,10 +1,12 @@
 import './App.css';
 import campusOverview from './assets/Campus_overview.png';
 import ParkingArea from './ParkingArea';
+import Navbar from './navbar';
 
 export default function MainPage() {
   return (
     <>
+      <Navbar></Navbar>
       <div className="bg-red-900 h-screen">
         <div>
           <br /><br />
